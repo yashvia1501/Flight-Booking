@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+.item-name{
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  
+}
+.item-rating{
+  height: 20px;
+  width: 20px;
+  border: 1px solid yellow;
+}
+.item-status{
+  height: 60px;
+  width: 80px;
+  border: 1px solid green;
+  
+  
+}
+.item-details{
+  border: 2px solid rgb(168, 168, 223);
+  width: 200px;
+  display: block;
+    
+}
+.slidecontainer {
+  width: 100%;
+}
+.flight-details{
+  width: 80%;
+  overflow-x: auto;
+  border: 2px solid black;
+  height: 400px;
+  margin: auto;
+  padding: auto;
+}
