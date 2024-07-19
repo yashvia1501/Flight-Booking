@@ -4,8 +4,8 @@ import NewBookings from './NewBookings'
 const Bookings = () => {
   return (
     <div>
-      past bookings
-      new bookings
+      // past bookings
+      // new bookings
       <NewBookings/>
     </div>
   )
