@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -71,4 +71,121 @@
   height: 400px;
   margin: auto;
   padding: auto;
+} */
+
+.item-details {
+  background-color: white;
+}
+
+.item-details:hover {
+  background-color: rgba(185, 183, 183, 0.3);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+body {
+  width: 100vw;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f6f8fc;
+}
+
+.App {
+  height: 100vh;
+}
+.box-padding{
+  padding:8px 8px;
+  border-radius: 20px;
+  border: 1px solid darkgray;
+}
+.box-padding:hover{
+  background-color: rgba(214, 210, 210, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.nav-items{
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+.nav-items:hover{
+  color: rgb(64, 150, 201);
+  cursor: pointer;
+}
+.app-icon{
+    margin-left: 61px;
+    font-size: 30px;
+    border-radius: 80%;
+    border: 0px solid black;
+    height: 36px;
+    width: 40px;
+    background-color:#c0cbd682;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.placesName{
+  display: flex;
+ align-items: center;
+ justify-content: center;
+ font-weight: 500;
+ padding-top:3px ;
+}
+.wholeimg{
+  scrollbar-width: none;
+    scroll-padding-left: 52px;
+    scroll-behavior: auto;
+    scroll-snap-type: x mandatory;
+}
+body.active-modal {
+  overflow-y: hidden;
+}
+
+.modal, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(49,49,49,0.8);
+}
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #f1f1f1;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: auto;
+  min-width: 300px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+}
+.dash-item-detail{
+    align-items: center;
+    display: flex;
+    min-height: 32px;
+    border: 1px  solid rgb(205 192 192);
+    border-radius: 10px;
+    margin-bottom: 16px;
+    height: 32px;
+    padding: 20px;
+    width: 68%;
+    margin-left: 250px;
+    background-color:white;
+ 
 }

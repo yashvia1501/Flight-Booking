@@ -1,13 +1,9 @@
 import React from 'react'
 import NewBookings from './NewBookings'
 
-const Bookings = () => {
+const Bookings = ({bookings, setbookings}) => {
   return (
-    <div>
-      // past bookings
-      // new bookings
-      <NewBookings/>
-    </div>
+    <NewBookings bookings={bookings} setbookings={setbookings} />
   )
 }
 
