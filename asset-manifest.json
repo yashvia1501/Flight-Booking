@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.e008fa1d.css",
-    "main.js": "/react-gh-pages/static/js/main.435ba026.js",
-    "static/js/453.82d35145.chunk.js": "/react-gh-pages/static/js/453.82d35145.chunk.js",
-    "static/media/revicons.eot": "/react-gh-pages/static/media/revicons.a77de540a38981833f9e.eot",
-    "static/media/revicons.ttf": "/react-gh-pages/static/media/revicons.57fd05d4ae650374c8de.ttf",
-    "static/media/revicons.woff": "/react-gh-pages/static/media/revicons.e8746a624ed098489406.woff",
-    "index.html": "/react-gh-pages/index.html",
-    "main.e008fa1d.css.map": "/react-gh-pages/static/css/main.e008fa1d.css.map",
-    "main.435ba026.js.map": "/react-gh-pages/static/js/main.435ba026.js.map",
-    "453.82d35145.chunk.js.map": "/react-gh-pages/static/js/453.82d35145.chunk.js.map"
+    "main.css": "/yashvia1501/Flight-Booking/static/css/main.66e5d5cb.css",
+    "main.js": "/yashvia1501/Flight-Booking/static/js/main.cb1431fc.js",
+    "static/js/453.82d35145.chunk.js": "/yashvia1501/Flight-Booking/static/js/453.82d35145.chunk.js",
+    "static/media/revicons.eot": "/yashvia1501/Flight-Booking/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/yashvia1501/Flight-Booking/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/yashvia1501/Flight-Booking/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/yashvia1501/Flight-Booking/index.html",
+    "main.66e5d5cb.css.map": "/yashvia1501/Flight-Booking/static/css/main.66e5d5cb.css.map",
+    "main.cb1431fc.js.map": "/yashvia1501/Flight-Booking/static/js/main.cb1431fc.js.map",
+    "453.82d35145.chunk.js.map": "/yashvia1501/Flight-Booking/static/js/453.82d35145.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e008fa1d.css",
-    "static/js/main.435ba026.js"
+    "static/css/main.66e5d5cb.css",
+    "static/js/main.cb1431fc.js"
   ]
 }
