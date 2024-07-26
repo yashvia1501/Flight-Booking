@@ -24,23 +24,24 @@ const NewBookings = ({bookings,setbookings}) => {
    
    
    useEffect(()=>{
-      const datawithkeys=post.map((item,index)=>{
+      const datawithkeys=originalPost.map((item,index)=>{
          return {
             ...item, 
             stop: item.name === "Mercury Airlines" || item.name==="Venus Airlines" || item.name==="Earth Airlines"
             || item.name==="Mars Airlines" ? "nonstop" : "onestop" 
           };
         });
-      setPosts(datawithkeys)
+      setOriginalPosts(datawithkeys)
+
       
-   },[post.length])
+   },[])
 
    //use effect used to check if the temdata state is changing or not
 //    useEffect(()=>{
 // console.log(tempData)
 //    },[tempData])
 
-   console.log("post", post);
+   console.log("post", post, originalPost);
    const uniqueArrivals = [...new Set(originalPost.map((item) => item.arrival))];
    const uniqueDepartures = [
       ...new Set(originalPost.map((item) => item.departure)),
@@ -98,7 +99,7 @@ const NewBookings = ({bookings,setbookings}) => {
       handleSort();
    };
    const handleFlightSearch=(e)=>{
-     const updatePost=originalPost.filter((item)=>item.name.toLowerCase().includes(e.target.value.toLowerCase()))
+     const updatePost=post.filter((item)=>item.name.toLowerCase().includes(e.target.value.toLowerCase()))
      setPosts(updatePost)
    }
 
@@ -107,7 +108,7 @@ const NewBookings = ({bookings,setbookings}) => {
       setstop(isChecked);
    
       if (isChecked) {
-         const updatePost = post.filter((item) => item.stop === "nonstop");
+         const updatePost = originalPost.filter((item) => item.stop === "nonstop");
          setPosts(updatePost);
       } else {
          setPosts(originalPost);
@@ -118,7 +119,7 @@ const NewBookings = ({bookings,setbookings}) => {
       setstop(isChecked);
    
       if (isChecked) {
-         const updatePost = post.filter((item) => item.stop === "onestop");
+         const updatePost = originalPost.filter((item) => item.stop === "onestop");
          setPosts(updatePost);
       } else {
          setPosts(originalPost);
@@ -145,7 +146,7 @@ const NewBookings = ({bookings,setbookings}) => {
       setbookings([...bookings,updatepost]);
       navigate('/')
    }
-      
+
 
    return (
       <>
@@ -153,7 +154,7 @@ const NewBookings = ({bookings,setbookings}) => {
          modal?.status && (
       <div className="modal">
          <div onClick={toggleModal} className="overlay">
-            <div className="modal-content">
+  <div className="modal-content" style={{ boxShadow: "5px 6px gray"}}>
                <div>
                   {
                      
@@ -163,7 +164,7 @@ const NewBookings = ({bookings,setbookings}) => {
                   )}
                </div>
                <p>Are you sure you want to confirm your booking ?</p>
-               <button className="close-btn" onClick={handleYes}>YES</button>
+               <button className="close-btn" onClick={handleYes}style={{marginRight:"8px"}}>YES</button>
                <button className="close-btn" onClick={handleNo}>NO</button>
                </div>
          </div>
@@ -177,17 +178,16 @@ const NewBookings = ({bookings,setbookings}) => {
                padding: "14px 20px",
                display: "flex", gap: "16px",
                flexWrap: "wrap",
-               backgroundColor: "white",
+               backgroundColor: "rgb(31 44 56 / 75%)",
                boxShadow: "0px 0px 3px black"
             }}
          >
 
-            <div style={{ display: "flex", alignItems: "center" }}>
+            <div style={{ display: "flex", alignItems: "center", fontSize:"14px",color:"white" }}>
                Arrival:
                <MdFlightTakeoff />
             </div>
-            <div>
-               <select className="box-padding"
+            <select className="box-padding" style={{ fontSize:"14px" }}
                   value={arrival}
                   onChange={(e) => setArrival(e.target.value)}>
                
@@ -198,12 +198,10 @@ const NewBookings = ({bookings,setbookings}) => {
                      </option>
                   ))}
                </select>
-            </div>
-            <div style={{ display: "flex", alignItems: "center" }}>
+            <div style={{ display: "flex", alignItems: "center", fontSize:"14px",color:"white" }}>
                Departure: <MdFlightLand />
             </div>
-            <div>
-               <select value={dept} onChange={(e) => setDept(e.target.value)} className="box-padding">
+            <select value={dept} onChange={(e) => setDept(e.target.value)} className="box-padding"  style={{ fontSize:"14px" }}>
                   <option value="">Select Departure</option>
                   {uniqueDepartures.map((dept, index) => (
                      <option key={index} value={dept}>
@@ -211,12 +209,11 @@ const NewBookings = ({bookings,setbookings}) => {
                      </option>
                   ))}
                </select>
-            </div>
             <div>
 
                <input type="date" className="box-padding" />
             </div>
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
+            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center",fontSize:"14px",color:"white"  }}>
                <div>Price:</div>
                <div>
 
@@ -233,7 +230,7 @@ const NewBookings = ({bookings,setbookings}) => {
                   <div>Default range slider:</div>{" "}
                </div>
                <div>
-                  <input
+                  <input style={{accentColor:"rgb(223, 85, 5)"}}
                      type="range"
                      min={3000}
                      max={10000}
@@ -261,20 +258,22 @@ const NewBookings = ({bookings,setbookings}) => {
             paddingTop: "20px",
             marginTop: "4px",
             display: "flex",
-            // alignItems: "center",
+            gap: "40px",
+      
 
 
          }}>
             <div>
-            <div>
+            <div style={{height:"84px"}}>
+               Filter by Name :
                <div><input type="text" placeholder="flight name" onChange={(e)=>handleFlightSearch(e)}/></div>
             </div>
-            <div> <div>Filter By Stops</div> 
-               <div><input type="checkbox" value={stop} onChange={(e) => handleNonStop(e)}/>Non-Stop</div>
-               <div><input type="checkbox" value={stop} onChange={(e)=>handleOneStop(e)}/>1-Stop</div>
+            <div> <div style={{height:"30px"}}>Filter By Stops</div> 
+               <div><input type="radio" name="stop" value={stop} onChange={(e) => handleNonStop(e)}/>Non-Stop</div>
+               <div><input type="radio" name="stop" value={stop} onChange={(e)=>handleOneStop(e)}/>1-Stop</div>
             </div>
             </div>
-            <div>
+            <div style={{ width: "80%" }}>
                {post.length > 0
                   ? post.map((item, index) => {
                      return (
@@ -283,14 +282,12 @@ const NewBookings = ({bookings,setbookings}) => {
                            style={{
                               display: "flex",
                               alignItems: "center",
-                              minHeight: "32px",
+                              // minHeight: "32px",
                               border: "1px  solid rgb(205 192 192)",
                               borderRadius: "10px",
                               marginBottom: "16px",
-                              height: "32px",
                               padding: "20px",
-                              width: "68%",
-                              marginLeft: "250px"
+                              width: "100%"
                            }}
                            className="item-details"
                         >
@@ -330,7 +327,8 @@ const NewBookings = ({bookings,setbookings}) => {
                                     borderRadius: "40px",
                                     color: "black",
                                     cursor: "pointer",
-                                    border: "1px solid darkblue"
+                                    border: "1px solid darkblue",
+                                    fontSize:"14px"
                                  }}
                               >
                                  {item.status}
