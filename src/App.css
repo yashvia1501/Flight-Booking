@@ -194,3 +194,9 @@ body.active-modal {
   top: 0px;
   z-index: -1;  
 }
+@media screen and (min-width: 80rem) {
+  .container {
+    margin: 1em 2em;
+    column-count: 3;
+  }
+}

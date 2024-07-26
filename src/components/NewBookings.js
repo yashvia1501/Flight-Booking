@@ -46,6 +46,9 @@ const NewBookings = ({bookings,setbookings}) => {
    const uniqueDepartures = [
       ...new Set(originalPost.map((item) => item.departure)),
    ];
+   console.log(uniqueArrivals)
+   console.log(uniqueDepartures)
+
 
    // Methods
    const handleSearch = () => {
@@ -146,6 +149,11 @@ const NewBookings = ({bookings,setbookings}) => {
       setbookings([...bookings,updatepost]);
       navigate('/')
    }
+   const HandleClear=()=>{
+    setArrival("")
+    setDept("")
+    setOriginalPosts(value)
+   }
 
 
    return (
@@ -169,7 +177,7 @@ const NewBookings = ({bookings,setbookings}) => {
                </div>
          </div>
       </div> )}
-         <div
+         <div 
             style={{
                width: "100vw",
                margin: "auto",
@@ -248,32 +256,44 @@ const NewBookings = ({bookings,setbookings}) => {
 
                   <button className="box-padding" onClick={(e)=>handleSearch(e)} >Search</button>
                </div>
+               <div><button className="box-padding" onClick={HandleClear}>clear</button></div>
             </div>
          </div>
 
          <div className="flight-details" style={{
-            padding: "0 20px",
+            padding: "0 18px",
             height: "calc(100% - 134px)",
             overflow: "auto",
             paddingTop: "20px",
             marginTop: "4px",
             display: "flex",
-            gap: "40px",
+            gap: "20px",
       
 
 
          }}>
-            <div>
+            <div style={{backgroundColor:"white",border: "1px solid rgb(205, 192, 192)",borderRadius: "10px",padding:"20px",display:"block",fontSize:"16px"}}>
             <div style={{height:"84px"}}>
-               Filter by Name :
+               <div style={{fontWeight:"500",marginBottom:"11px"}}>Filter by Name : </div>
                <div><input type="text" placeholder="flight name" onChange={(e)=>handleFlightSearch(e)}/></div>
             </div>
-            <div> <div style={{height:"30px"}}>Filter By Stops</div> 
-               <div><input type="radio" name="stop" value={stop} onChange={(e) => handleNonStop(e)}/>Non-Stop</div>
-               <div><input type="radio" name="stop" value={stop} onChange={(e)=>handleOneStop(e)}/>1-Stop</div>
+            <div style={{border:"1px solid rgb(205, 192, 192,0.67)",margin:"11px 11px"}}></div>
+            <div> <div style={{height:"30px",fontWeight:"500"}}>Filter By Stops</div> 
+               <div style={{fontSize:"14px"}}><input type="radio" name="stop" value={stop} onChange={(e) => handleNonStop(e)}/>Non-Stop</div>
+               <div style={{fontSize:"14px"}}><input type="radio" name="stop" value={stop} onChange={(e)=>handleOneStop(e)}/>1-Stop</div>
             </div>
+            <div style={{border:"1px solid rgb(205, 192, 192,0.67)",margin:"11px 11px"}}></div>
+            <div style={{marginTop:"30px"}}><div style={{marginBottom:"11px",fontWeight:"500"}}>Fare types</div>
+            <div style={{fontSize:"14px"}}><input type="radio"/>Student</div>
+            <div style={{fontSize:"14px"}}><input type="radio"/>Armed Forces</div>
+            <div style={{fontSize:"14px"}}><input type="radio"/>Senior Citizens</div>
+            <div style={{fontSize:"14px"}}><input type="radio"/>Doctor and Nurses</div>
+            <div style={{fontSize:"14px"}}><input type="radio"/>Regular</div>
+            <div style={{fontSize:"14px"}}><input type="radio"/>Specially Abled</div>
             </div>
-            <div style={{ width: "80%" }}>
+            <div style={{border:"1px solid rgb(205, 192, 192,0.67)",margin:"11px 11px"}}></div>
+            </div>
+            <div style={{ width: "78%" }}>
                {post.length > 0
                   ? post.map((item, index) => {
                      return (
