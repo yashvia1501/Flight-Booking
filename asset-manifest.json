@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/Flight-Booking/static/css/main.043e1e4f.css",
-    "main.js": "/Flight-Booking/static/js/main.42b7c3c9.js",
+    "main.js": "/Flight-Booking/static/js/main.96a5ff7f.js",
     "static/js/453.82d35145.chunk.js": "/Flight-Booking/static/js/453.82d35145.chunk.js",
     "static/media/revicons.eot": "/Flight-Booking/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/Flight-Booking/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/Flight-Booking/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/Flight-Booking/index.html",
     "main.043e1e4f.css.map": "/Flight-Booking/static/css/main.043e1e4f.css.map",
-    "main.42b7c3c9.js.map": "/Flight-Booking/static/js/main.42b7c3c9.js.map",
+    "main.96a5ff7f.js.map": "/Flight-Booking/static/js/main.96a5ff7f.js.map",
     "453.82d35145.chunk.js.map": "/Flight-Booking/static/js/453.82d35145.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.043e1e4f.css",
-    "static/js/main.42b7c3c9.js"
+    "static/js/main.96a5ff7f.js"
   ]
 }
