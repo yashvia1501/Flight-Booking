@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Navbar/>
       
-      <Routes basename="/Flight-Booking">
+      <Routes basename="/">
         <Route path="/" element={<Dashboard bookings={bookings} setbookings={setbookings}/>}/>
         <Route path="/bookings" element={<Bookings bookings={bookings} setbookings={setbookings}/>}/>
         
