@@ -10,7 +10,9 @@ import Star from "./Star";
 import ReactModal from "react-modal";
 import { useNavigate } from 'react-router-dom';
 
+
 const NewBookings = ({bookings,setbookings}) => {
+   
    const [post, setPosts] = useState(value);
    const [originalPost, setOriginalPosts] = useState(value);
    const [arrival, setArrival] = useState("");
@@ -51,6 +53,7 @@ const NewBookings = ({bookings,setbookings}) => {
 
 
    // Methods
+   
    const handleSearch = () => {
       const updatedPost = originalPost.filter(
          (item) =>

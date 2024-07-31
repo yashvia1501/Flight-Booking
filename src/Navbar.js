@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { GoPaperAirplane } from "react-icons/go";
 
+
 const Navbar = () => {
   return (
     <nav>

@@ -7,17 +7,18 @@ import Navbar from './Navbar';
 import NewBookings from './components/NewBookings';
 import { useState } from 'react';
 
+
+
 function App() {
   const [bookings,setbookings]=useState([])
   return (
     <div className="App">
-      {/* <Dashboard/>
-      <Bookings/> */}
       <Navbar/>
       
       <Routes>
         <Route path="/" element={<Dashboard bookings={bookings} setbookings={setbookings}/>}/>
         <Route path="/bookings" element={<Bookings bookings={bookings} setbookings={setbookings}/>}/>
+        
       </Routes>
     </div>
   );
