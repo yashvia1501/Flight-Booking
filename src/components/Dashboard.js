@@ -8,7 +8,10 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const Dashboard = ({bookings,setbookings}) => {  
+const Dashboard = ({
+  bookings,
+  setbookings,
+}) => {  
   const [post, setPosts] = useState(value);
   const [originalPost, setOriginalPosts] = useState(value);
   const [arrival, setArrival] = useState("");
@@ -60,9 +63,10 @@ const Dashboard = ({bookings,setbookings}) => {
         <div >
          Departure:{item.departure}
         </div>
-       <div>Cost:{item.cost}</div>
+       {/* <div>Cost:{item.cost}</div> */}
        <div>Duration: {item.duration}</div>
        <div>Flight Number :{item.flghtnumber}</div>
+       <div>Total Price :{item.cost * item.ticketCount}</div>
         </div>))
        }
        

@@ -3032,7 +3032,7 @@ export const value = [
         "cost": "15600",
         "currency": "INR",
         "logoImage": "Mercury.png",
-        "status": "Available Book Now",
+        "status": " Now",
         "flghtnumber": "MERC015"
     },
     {
