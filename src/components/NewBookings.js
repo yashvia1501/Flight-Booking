@@ -542,7 +542,7 @@ const NewBookings = ({ bookings, setbookings }) => {
                           borderRadius: "5px",
                           border: "none",
                           backgroundColor:
-                            item.ticketCount === 1 ? "grey" : "#28a745",
+                            item.ticketCount === 1 ? "grey" : "rgb(136 144 152)",
                           color: "white",
                           cursor:
                             item.ticketCount === 1 ? "not-allowed" : "pointer",
@@ -563,7 +563,7 @@ const NewBookings = ({ bookings, setbookings }) => {
                           fontSize: "16px",
                           borderRadius: "5px",
                           border: "none",
-                          backgroundColor: "#28a745",
+                          backgroundColor: "rgb(136 144 152)",
                           color: "white",
                           cursor: "pointer",
                           marginLeft: "10px",
